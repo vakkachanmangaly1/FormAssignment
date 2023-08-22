@@ -1,0 +1,45 @@
+
+<div class="container">
+<div class="container-fluid">
+<h2 style="background-color: darkblue; color:white;">Car Ride Registration Form</h2>
+<form [formGroup]="registrationForm">
+    <div class="form-group">
+      <label class="form-label">Name</label>
+      <input formControlName="name" type="text" class="form-control" >
+    </div>
+    <div *ngIf="registrationForm.get('name')?.invalid && registrationForm.get('name')?.touched"
+    class="bg-danger text-white">*Name is Required</div>
+    <div class="form-group">
+        <label class="form-label">Start Location</label>
+        <input formControlName="startLocation" type="text" class="form-control">
+    </div>
+    <div *ngIf="registrationForm.get('startLocation')?.invalid && registrationForm.get('startLocation')?.touched"
+    class="bg-danger text-white">*Start Location is Required</div>
+    <div class="form-group">
+        <label class="form-label">Destination</label>
+        <input formControlName="destination" type="text" class="form-control" >
+    </div>
+    <div *ngIf="registrationForm.get('destination')?.invalid && registrationForm.get('destination')?.touched"
+    class="bg-danger text-white">*Destination is Required</div>
+
+    <div class="form-group">
+        <label class="form-label">Car</label>
+        <input formControlName="car" type="text" class="form-control" >
+    </div>
+    <div *ngIf="registrationForm.get('car')?.invalid && registrationForm.get('car')?.touched"
+    class="bg-danger text-white">*Car is Required</div>
+    <div class="form-group">
+        <label class="form-label">Seats Available</label>
+        <input formControlName="seatsAvailable" type="text" class="form-control" >
+    </div>
+    <div *ngIf="registrationForm.get('seatsAvailable')?.invalid && registrationForm.get('seatsAvailable')?.touched"
+    class=" bg-danger text-white">*Seats Available should be between 0 and 8</div>
+    <br>
+    <button type="submit"[disabled]="!registrationForm.valid" class="btn btn-primary">Submit</button>
+    
+    <button type="submit" class="btn btn-primary" id="btn2">Go Back</button>
+    <br>
+
+  </form>
+</div>
+</div>

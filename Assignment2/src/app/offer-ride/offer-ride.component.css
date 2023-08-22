@@ -1,0 +1,14 @@
+.container{
+    padding-left: 20%;
+    padding-right: 20%;
+    padding-top: 5%;
+
+}
+.container-fluid{
+
+    box-shadow: 0 0 0 1px darkblue inset;
+
+}
+#btn2{
+    margin-left: 1%;
+}
